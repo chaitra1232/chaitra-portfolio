@@ -1,0 +1,119 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360" width="100%" height="100%">
+  <defs>
+    <linearGradient id="ragBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#140c1e"/>
+      <stop offset="100%" stop-color="#090510"/>
+    </linearGradient>
+    <linearGradient id="neonPinkViolet" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ff2a85"/>
+      <stop offset="50%" stop-color="#a855f7"/>
+      <stop offset="100%" stop-color="#6366f1"/>
+    </linearGradient>
+    <linearGradient id="crimsonAcc" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff1744"/>
+      <stop offset="100%" stop-color="#ff2a85"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="6" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="600" height="360" rx="16" fill="url(#ragBg)"/>
+
+  <!-- Subtle Grid -->
+  <g stroke="rgba(255, 42, 133, 0.08)" stroke-width="1">
+    <line x1="0" y1="60" x2="600" y2="60"/>
+    <line x1="0" y1="120" x2="600" y2="120"/>
+    <line x1="0" y1="180" x2="600" y2="180"/>
+    <line x1="0" y1="240" x2="600" y2="240"/>
+    <line x1="0" y1="300" x2="600" y2="300"/>
+    <line x1="100" y1="0" x2="100" y2="360"/>
+    <line x1="200" y1="0" x2="200" y2="360"/>
+    <line x1="300" y1="0" x2="300" y2="360"/>
+    <line x1="400" y1="0" x2="400" y2="360"/>
+    <line x1="500" y1="0" x2="500" y2="360"/>
+  </g>
+
+  <!-- Video Player Simulation Box -->
+  <rect x="40" y="45" width="280" height="180" rx="10" fill="#0d0818" stroke="#ff2a85" stroke-width="1.8"/>
+  
+  <!-- Video Frame Timeline Header -->
+  <rect x="40" y="45" width="280" height="26" rx="10" fill="#1b122b"/>
+  <circle cx="55" cy="58" r="4" fill="#ff1744"/>
+  <circle cx="68" cy="58" r="4" fill="#ffb703"/>
+  <circle cx="81" cy="58" r="4" fill="#00f5d4"/>
+  <text x="100" y="62" fill="#d1d5db" font-family="'Plus Jakarta Sans', monospace" font-size="10">multimodal_video_stream.mp4</text>
+
+  <!-- Simulated Video Content & Entity Detection Bounding Boxes -->
+  <g transform="translate(60, 85)">
+    <!-- Ambient video backdrop -->
+    <rect width="240" height="120" rx="6" fill="#130b22"/>
+    
+    <!-- Object 1 Bounding Box -->
+    <rect x="25" y="20" width="70" height="75" rx="4" fill="rgba(255, 42, 133, 0.12)" stroke="#ff2a85" stroke-width="1.5" stroke-dasharray="4 2"/>
+    <rect x="25" y="10" width="60" height="14" rx="3" fill="#ff2a85"/>
+    <text x="30" y="20" fill="#ffffff" font-family="sans-serif" font-size="8" font-weight="bold">Entity: Person 98%</text>
+
+    <!-- Object 2 Bounding Box -->
+    <rect x="135" y="35" width="85" height="60" rx="4" fill="rgba(0, 245, 212, 0.1)" stroke="#00f5d4" stroke-width="1.5"/>
+    <rect x="135" y="25" width="68" height="14" rx="3" fill="#00f5d4"/>
+    <text x="140" y="35" fill="#000000" font-family="sans-serif" font-size="8" font-weight="bold">Entity: Vehicle 94%</text>
+
+    <!-- Scanning Line -->
+    <line x1="120" y1="10" x2="120" y2="110" stroke="#a855f7" stroke-width="2" filter="url(#glow)"/>
+  </g>
+
+  <!-- Video Scrub Bar -->
+  <rect x="40" y="235" width="280" height="6" rx="3" fill="#23173d"/>
+  <rect x="40" y="235" width="160" height="6" rx="3" fill="url(#crimsonAcc)"/>
+  <circle cx="200" cy="238" r="5" fill="#ffffff" filter="url(#glow)"/>
+
+  <!-- RAG Knowledge Base / Vector Index Panel (Right Side) -->
+  <rect x="350" y="45" width="210" height="260" rx="12" fill="#0e0a1b" stroke="#8b5cf6" stroke-width="1.5"/>
+  <text x="370" y="75" fill="#ffffff" font-family="'Plus Jakarta Sans', sans-serif" font-size="12" font-weight="700">RAG Vector Retrieval</text>
+  <text x="370" y="92" fill="#a855f7" font-family="monospace" font-size="10">&gt; Frame Feature Index</text>
+
+  <!-- Vector Nodes and Connection Lines -->
+  <g transform="translate(370, 110)">
+    <!-- Connections -->
+    <line x1="20" y1="30" x2="80" y2="20" stroke="rgba(255, 42, 133, 0.5)" stroke-width="1.5"/>
+    <line x1="80" y1="20" x2="140" y2="50" stroke="rgba(168, 85, 247, 0.5)" stroke-width="1.5"/>
+    <line x1="20" y1="30" x2="70" y2="90" stroke="rgba(0, 245, 212, 0.5)" stroke-width="1.5"/>
+    <line x1="70" y1="90" x2="140" y2="50" stroke="rgba(255, 42, 133, 0.5)" stroke-width="1.5"/>
+    <line x1="70" y1="90" x2="130" y2="120" stroke="rgba(168, 85, 247, 0.5)" stroke-width="1.5"/>
+
+    <!-- Nodes -->
+    <circle cx="20" cy="30" r="7" fill="#ff2a85" filter="url(#glow)"/>
+    <circle cx="80" cy="20" r="9" fill="#a855f7" filter="url(#glow)"/>
+    <circle cx="140" cy="50" r="8" fill="#00f5d4" filter="url(#glow)"/>
+    <circle cx="70" cy="90" r="8" fill="#ff1744" filter="url(#glow)"/>
+    <circle cx="130" cy="120" r="10" fill="#a855f7" filter="url(#glow)"/>
+
+    <text x="30" y="34" fill="#d1d5db" font-family="monospace" font-size="9">v_t1</text>
+    <text x="92" y="24" fill="#d1d5db" font-family="monospace" font-size="9">v_t2</text>
+    <text x="152" y="54" fill="#d1d5db" font-family="monospace" font-size="9">top-k</text>
+    <text x="82" y="94" fill="#d1d5db" font-family="monospace" font-size="9">ctx</text>
+  </g>
+
+  <!-- Query / Prompt Result Box at Bottom of Panel -->
+  <rect x="365" y="250" width="180" height="42" rx="8" fill="#18112e" stroke="rgba(255, 42, 133, 0.4)"/>
+  <text x="375" y="267" fill="#ff2a85" font-family="monospace" font-size="9">&gt; Predict Entity:</text>
+  <text x="375" y="282" fill="#ffffff" font-family="sans-serif" font-size="10" font-weight="600">Action: Cross-Intersection</text>
+
+  <!-- Bottom Badges -->
+  <g transform="translate(40, 275)">
+    <rect x="0" y="0" width="85" height="26" rx="6" fill="#1e1233" stroke="#ff2a85" stroke-width="1"/>
+    <text x="14" y="17" fill="#ff2a85" font-family="sans-serif" font-size="10" font-weight="600">PyTorch</text>
+
+    <rect x="95" y="0" width="90" height="26" rx="6" fill="#1e1233" stroke="#a855f7" stroke-width="1"/>
+    <text x="108" y="17" fill="#a855f7" font-family="sans-serif" font-size="10" font-weight="600">OpenCV</text>
+
+    <rect x="195" y="0" width="85" height="26" rx="6" fill="#1e1233" stroke="#00f5d4" stroke-width="1"/>
+    <text x="210" y="17" fill="#00f5d4" font-family="sans-serif" font-size="10" font-weight="600">VectorDB</text>
+  </g>
+</svg>

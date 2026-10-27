@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360" width="100%" height="100%">
+  <defs>
+    <linearGradient id="stockBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#140c1e"/>
+      <stop offset="100%" stop-color="#0a0612"/>
+    </linearGradient>
+    <linearGradient id="chartGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ff2a85" stop-opacity="0.45"/>
+      <stop offset="50%" stop-color="#a855f7" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#6366f1" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="lineGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ff1744"/>
+      <stop offset="40%" stop-color="#ff2a85"/>
+      <stop offset="75%" stop-color="#a855f7"/>
+      <stop offset="100%" stop-color="#00f5d4"/>
+    </linearGradient>
+    <filter id="stockGlow">
+      <feGaussianBlur stdDeviation="5" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="600" height="360" rx="16" fill="url(#stockBg)"/>
+
+  <!-- Subtle Chart Grid Lines -->
+  <g stroke="rgba(255, 42, 133, 0.08)" stroke-width="1">
+    <line x1="40" y1="80" x2="560" y2="80"/>
+    <line x1="40" y1="130" x2="560" y2="130"/>
+    <line x1="40" y1="180" x2="560" y2="180"/>
+    <line x1="40" y1="230" x2="560" y2="230"/>
+    <line x1="40" y1="280" x2="560" y2="280"/>
+  </g>
+
+  <!-- Top Metric Cards -->
+  <g transform="translate(40, 25)">
+    <!-- Card 1: Balance -->
+    <rect width="160" height="48" rx="8" fill="#130e22" stroke="rgba(255, 42, 133, 0.3)" stroke-width="1"/>
+    <text x="14" y="20" fill="#a1a1aa" font-family="'Plus Jakarta Sans', sans-serif" font-size="10">Total Portfolio Value</text>
+    <text x="14" y="38" fill="#ffffff" font-family="'Plus Jakarta Sans', sans-serif" font-size="15" font-weight="700">\$148,920.50</text>
+
+    <!-- Card 2: Return Rate -->
+    <rect x="175" width="160" height="48" rx="8" fill="#130e22" stroke="rgba(0, 245, 212, 0.3)" stroke-width="1"/>
+    <text x="189" y="20" fill="#a1a1aa" font-family="'Plus Jakarta Sans', sans-serif" font-size="10">All-Time Returns</text>
+    <text x="189" y="38" fill="#00f5d4" font-family="'Plus Jakarta Sans', sans-serif" font-size="15" font-weight="700">+34.8% ▲</text>
+
+    <!-- Card 3: Real-Time Status -->
+    <rect x="350" width="170" height="48" rx="8" fill="#130e22" stroke="rgba(168, 85, 247, 0.3)" stroke-width="1"/>
+    <text x="364" y="20" fill="#a1a1aa" font-family="'Plus Jakarta Sans', sans-serif" font-size="10">Market Status: Live</text>
+    <text x="364" y="38" fill="#a855f7" font-family="'Plus Jakarta Sans', sans-serif" font-size="13" font-weight="600">NYSE &amp; NASDAQ</text>
+  </g>
+
+  <!-- Chart Area -->
+  <g transform="translate(40, 95)">
+    <!-- Shaded Area Under Curve -->
+    <path d="M 0 170 Q 60 140, 110 150 T 210 90 T 310 110 T 400 40 T 520 20 L 520 180 L 0 180 Z" fill="url(#chartGradient)"/>
+
+    <!-- Glowing Line Chart -->
+    <path d="M 0 170 Q 60 140, 110 150 T 210 90 T 310 110 T 400 40 T 520 20" fill="none" stroke="url(#lineGrad)" stroke-width="3.5" filter="url(#stockGlow)"/>
+
+    <!-- Glowing Point & Tooltip on High Peak -->
+    <circle cx="400" cy="40" r="6" fill="#00f5d4" filter="url(#stockGlow)"/>
+    <circle cx="400" cy="40" r="2.5" fill="#ffffff"/>
+    
+    <!-- Tooltip Box -->
+    <rect x="345" y="-5" width="110" height="32" rx="6" fill="#1e1633" stroke="#00f5d4" stroke-width="1.2"/>
+    <text x="355" y="12" fill="#a1a1aa" font-family="sans-serif" font-size="9">ATH Level</text>
+    <text x="355" y="23" fill="#ffffff" font-family="sans-serif" font-size="10" font-weight="bold">\$152,400.00</text>
+
+    <!-- Candlestick Accents at Bottom -->
+    <g transform="translate(40, 130)" opacity="0.6">
+      <line x1="30" y1="0" x2="30" y2="40" stroke="#00f5d4" stroke-width="1.5"/>
+      <rect x="26" y="8" width="8" height="20" fill="#00f5d4" rx="1"/>
+      <line x1="60" y1="10" x2="60" y2="45" stroke="#ff1744" stroke-width="1.5"/>
+      <rect x="56" y="16" width="8" height="18" fill="#ff1744" rx="1"/>
+      <line x1="90" y1="-5" x2="90" y2="35" stroke="#00f5d4" stroke-width="1.5"/>
+      <rect x="86" y="4" width="8" height="22" fill="#00f5d4" rx="1"/>
+      <line x1="120" y1="5" x2="120" y2="45" stroke="#00f5d4" stroke-width="1.5"/>
+      <rect x="116" y="10" width="8" height="16" fill="#00f5d4" rx="1"/>
+    </g>
+  </g>
+
+  <!-- Bottom Badges / Tech Stack -->
+  <g transform="translate(40, 305)">
+    <rect x="0" y="0" width="105" height="28" rx="6" fill="#181028" stroke="#ff2a85" stroke-width="1"/>
+    <text x="14" y="18" fill="#ff2a85" font-family="sans-serif" font-size="10" font-weight="600">JavaScript ES6</text>
+
+    <rect x="115" y="0" width="85" height="28" rx="6" fill="#181028" stroke="#a855f7" stroke-width="1"/>
+    <text x="130" y="18" fill="#a855f7" font-family="sans-serif" font-size="10" font-weight="600">MySQL</text>
+
+    <rect x="210" y="0" width="95" height="28" rx="6" fill="#181028" stroke="#00f5d4" stroke-width="1"/>
+    <text x="225" y="18" fill="#00f5d4" font-family="sans-serif" font-size="10" font-weight="600">REST APIs</text>
+
+    <rect x="315" y="0" width="100" height="28" rx="6" fill="#181028" stroke="#ff1744" stroke-width="1"/>
+    <text x="330" y="18" fill="#ff1744" font-family="sans-serif" font-size="10" font-weight="600">Data Analytics</text>
+  </g>
+</svg>

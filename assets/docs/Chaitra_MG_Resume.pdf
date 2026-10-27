@@ -1,0 +1,89 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /Resources << /Font << /F1 4 0 R /F2 5 0 R >> >> /MediaBox [0 0 595.28 841.89] /Contents 6 0 R >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+6 0 obj
+<< /Length 1383 >>
+stream
+BT
+/F2 22 Tf
+50 780 Td
+(CHAITRA M G) Tj
+0 -24 Td
+/F1 11 Tf
+(Final-Year Computer Science & Engineering Student | Aspiring Software Engineer) Tj
+0 -16 Td
+(Email: chaitrachethaa@gmail.com | CGPA: 9.2 | Graduation: 2027) Tj
+0 -16 Td
+(College: Amrutha Institute of Engineering and Management Sciences) Tj
+0 -28 Td
+/F2 14 Tf
+(EDUCATION) Tj
+0 -18 Td
+/F2 11 Tf
+(B.E. in Computer Science & Engineering) Tj
+0 -15 Td
+/F1 10 Tf
+(Amrutha Institute of Engineering and Management Sciences | 2023 - 2027 | CGPA: 9.2 / 10.0) Tj
+0 -28 Td
+/F2 14 Tf
+(TECHNICAL SKILLS) Tj
+0 -18 Td
+/F1 10 Tf
+(Programming Languages: Python, Java, C) Tj
+0 -15 Td
+(Web Technologies: HTML5, CSS3, JavaScript, React) Tj
+0 -15 Td
+(Databases & Tools: MySQL, Git, GitHub) Tj
+0 -15 Td
+(Specializations: Data Analysis, Machine Learning, RAG Multimodal Pipelines) Tj
+0 -28 Td
+/F2 14 Tf
+(FEATURED PROJECTS) Tj
+0 -18 Td
+/F2 11 Tf
+(1. AI-Based Video Entity Prediction using RAG) Tj
+0 -15 Td
+/F1 10 Tf
+(- Multimodal RAG architecture indexing frame features and performing semantic entity queries.) Tj
+0 -18 Td
+/F2 11 Tf
+(2. Stock Portfolio Tracker) Tj
+0 -15 Td
+/F1 10 Tf
+(- Dynamic portfolio valuation web application with real-time risk assessment and analytics.) Tj
+0 -18 Td
+/F2 11 Tf
+(3. Weather Forecast Web App) Tj
+0 -15 Td
+/F1 10 Tf
+(- Meteorological dashboard providing geolocated forecasts, interactive maps, and alerts.) Tj
+ET
+endstream
+endobj
+xref
+0 7
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000257 00000 n 
+0000000327 00000 n 
+0000000402 00000 n 
+trailer
+<< /Size 7 /Root 1 0 R >>
+startxref
+1837
+%%EOF
